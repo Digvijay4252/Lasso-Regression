@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Startup Profit Predictor (Lasso Regression)</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f6fc;
+        padding: 40px;
+      }
+      .container {
+        background: #fff;
+        max-width: 600px;
+        margin: auto;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        color: #2d3436;
+      }
+      label {
+        font-weight: bold;
+        margin-top: 15px;
+        display: block;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+      }
+      input[type="submit"] {
+        margin-top: 20px;
+        background-color: #007bff;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+      .result {
+        margin-top: 25px;
+        font-size: 18px;
+        text-align: center;
+        color: #2c3e50;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>📈 Startup Profit Predictor</h1>
+      <form method="POST">
+        <label for="rd_spend">R&D Spend ($):</label>
+        <input type="number" name="rd_spend" step="0.01" required />
+
+        <label for="administration">Administration Cost ($):</label>
+        <input type="number" name="administration" step="0.01" required />
+
+        <label for="marketing_spend">Marketing Spend ($):</label>
+        <input type="number" name="marketing_spend" step="0.01" required />
+
+        <label for="state">State:</label>
+        <select name="state" required>
+          <option value="California">California</option>
+          <option value="Florida">Florida</option>
+          <option value="New York">New York</option>
+        </select>
+
+        <input type="submit" value="Predict Profit" />
+      </form>
+
+      {% if prediction %}
+      <div class="result">
+        🧮 Estimated Profit: <strong>{{ prediction }}</strong>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
+
+
+<!-- /lasso_app/
+├── app.py
+├── train_model.py
+├── startup_funding.csv
+├── model.pkl
+├── state_encoder.pkl
+└── templates/
+    └── index.html -->
