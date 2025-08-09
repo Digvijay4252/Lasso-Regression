@@ -2,9 +2,10 @@
 
 <img width="1900" height="905" alt="image" src="https://github.com/user-attachments/assets/7dcf124b-88fb-479e-8940-39fc8bbacb1e" /> -->
 
-## Final Grade Predictor – Lasso Regression Model
+# Final Grade Predictor – Lasso Regression Model
 
 This project uses Lasso Regression, a linear regression technique with L1 regularization, to predict a student's final academic grade (G3). The project includes a clean, interactive Flask web interface where users can input student characteristics and get real-time predictions.
+
 ---
 
 ## What is Lasso Regression?
@@ -49,7 +50,16 @@ Open in browser
 Visit: http://localhost:10000
 
 ## Screenshots
-<img width="1900" height="905" alt="image" src="https://github.com/user-attachments/assets/7dcf124b-88fb-479e-8940-39fc8bbacb1e" />
+
+### Step 1
+<img width="1895" height="908" alt="image" src="https://github.com/user-attachments/assets/f5a459dc-0604-40f4-af43-798782d2ef7b" />
+
+### Step 2
+<img width="1887" height="893" alt="image" src="https://github.com/user-attachments/assets/17fe292a-bdce-40e7-9d35-549b8b53c8ba" />
+
+### Step 3
+<img width="1895" height="906" alt="image" src="https://github.com/user-attachments/assets/1687aa36-071f-4cf6-b719-11d5a84426de" />
+
 
 ## Future Improvements
 Include prediction confidence or error margin
